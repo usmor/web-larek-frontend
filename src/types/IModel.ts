@@ -10,7 +10,7 @@ export interface ICatalogModel {
 
 // Корзина
 export interface IBasketModel {
-  items: Map<string, number>;       // товары в корзине
+  items: string[];                  // товары в корзине
   totalPrice: number;               // итоговая цена
   totalProductNumber: number;       // количество товаров
   add(id: string): void;            // добавить товар в корзину
