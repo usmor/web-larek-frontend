@@ -1,4 +1,6 @@
 # Проектная работа "Веб-ларек"
+Веб-приложение находится по [ссылке](https://usmor.github.io/web-larek-frontend/).\
+Код приложения находится в GitHub репозитории по [ссылке](https://github.com/usmor/web-larek-frontend).
 
 Стек: HTML, SCSS, TS, Webpack
 
