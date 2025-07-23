@@ -10,19 +10,20 @@ export interface ICatalogModel {
 
 // Корзина
 export interface IBasketModel {
-  items: string[];                  // товары в корзине
-  totalPrice: number;               // итоговая цена
-  totalProductNumber: number;       // количество товаров
-  add(id: string): void;            // добавить товар в корзину
-  remove(id: string): void;         // удалить товар из корзины
-  clear(): void;
+  items: string[];                        // товары в корзине
+  totalPrice: number;                     // итоговая цена
+  totalProductNumber: number;             // количество товаров
+  add(id: string): void;                  // добавить товар в корзину
+  remove(id: string): void;               // удалить товар из корзины
+  clear(): void;                          // очистить корзину
 }
 
 // Заказ
 export interface IOrderModel {
   order: IOrderDetails;                                               // данные заказа
   formErrors: Partial<Record<keyof IOrderDetails, string>>;           // ошибки формы
-  updateOrderField(field: keyof IOrderDetails, value: string): void;  // обновить поле
+  updateOrderField(field: keyof IOrderDetails, value: string): void;  // обновить поле формы
+  updateBasketData(items: string[], total: number): void;             // обновить данные корзины
   validate(): boolean;                                                // проверить заполненность
   getOrder(): IOrderDetails;                                          // получить заказ (если валиден)
   clear(): void;

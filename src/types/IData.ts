@@ -10,12 +10,12 @@ export interface IProduct {
 
 // Данные заказа
 export interface IOrderDetails {
-  paymentMethod: string;
+  payment: string;
   address: string;
   email: string;
   phone: string;
-  items: IProduct[];
-  totalPrice: number;
+  items: string[];
+  total: number;
 }
 
 // Данные заказа, полученные Api

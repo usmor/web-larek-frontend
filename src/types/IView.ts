@@ -6,7 +6,7 @@ export interface ICardActions {
 export interface ICard {
   id: string;
   title: string;
-  price: number;
+  price: number | null;
 }
 
 //  каталог
@@ -22,9 +22,14 @@ export interface ICardPreview extends ICard {
   category: string;
 }
 
+// товар в корзине 
+export interface IBasketItem extends ICard {
+	index: number;
+}
+
 // модальное окно 
 export interface IModalData {
-    content: HTMLElement;
+  content: HTMLElement;
 }
 
 // корзина
